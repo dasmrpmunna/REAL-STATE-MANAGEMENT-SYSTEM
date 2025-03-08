@@ -81,7 +81,7 @@ const SignUp = () => {
 
           <button
             disabled={loading}
-            className="bg-gray-900 text-white p-3 rounded-lg uppercase font-semibold hover:opacity-90 disabled:opacity-50 transition duration-300"
+            className="bg-gray-900 text-white p-2 rounded-lg uppercase font-semibold hover:opacity-90 disabled:opacity-50 transition duration-300"
           >
             {loading ? "Loading..." : "Sign Up"}
           </button>
