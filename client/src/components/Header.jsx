@@ -25,8 +25,9 @@ const Header = () => {
   }, [location.search]);
 
   return (
-    <header className="bg-dark text-white py-3">
-      <div className="container d-flex justify-content-between align-items-center">
+    <header className="bg-dark text-white py-4 shadow-lg">
+      <div className="container d-flex flex-wrap justify-content-between align-items-center">
+        
         {/* Logo */}
         <Link to="/" className="text-decoration-none">
           <h1 className="fw-bold fs-4 m-0">
@@ -35,40 +36,26 @@ const Header = () => {
           </h1>
         </Link>
 
-        {/* Search Bar */}
-        {/* <form onSubmit={handleSubmit} className="d-flex bg-light rounded border">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="form-control border-0 me-5"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <button className="btn p-2">
-            <FaSearch className="text-dark" />
-          </button>
-        </form> */}
-
         {/* Navigation */}
-        <ul className="nav">
+        <ul className="nav gap-3">
           <li className="nav-item">
-            <Link to="/" className="nav-link text-light">
+            <Link to="/" className="nav-link text-light fw-semibold px-4 py-2 rounded bg-transparent hover:bg-warning transition">
               Home
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-link text-light">
+            <Link to="/about" className="nav-link text-light fw-semibold px-4 py-2 rounded bg-transparent hover:bg-warning transition">
               About
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/profile" className="nav-link text-light">
+            <Link to="/profile" className="nav-link px-3 py-1 rounded bg-warning text-dark fw-semibold hover:bg-yellow-600 transition">
               {currentUser ? (
                 <img
                   src={currentUser.avatar}
                   alt="avatar"
-                  className="rounded-circle"
-                  style={{ height: "30px", width: "30px", objectFit: "cover" }}
+                  className="rounded-circle border border-light"
+                  style={{ height: "35px", width: "35px", objectFit: "cover" }}
                 />
               ) : (
                 "Sign In"
@@ -76,19 +63,21 @@ const Header = () => {
             </Link>
           </li>
         </ul>
+
         {/* Search Bar */}
-        <form onSubmit={handleSubmit} className="d-flex bg-light rounded border">
+        <form onSubmit={handleSubmit} className="d-flex bg-light rounded border overflow-hidden">
           <input
             type="text"
             placeholder="Search..."
-            className="form-control border-0 me-2"
+            className="form-control border-0 px-3"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button className="btn p-2">
+          <button className="btn bg-warning px-3 py-1">
             <FaSearch className="text-dark" />
           </button>
         </form>
+
       </div>
     </header>
   );
