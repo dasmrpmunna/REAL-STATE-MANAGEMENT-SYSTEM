@@ -215,7 +215,7 @@ const Profile = () => {
           id="username"
           defaultValue={currentUser.username}
           onChange={handleChange}
-          className="border p-3 rounded-lg"
+          className="border p-2.5 rounded-lg"
         />
 
         <input
@@ -224,7 +224,7 @@ const Profile = () => {
           id="email"
           defaultValue={currentUser.email}
           onChange={handleChange}
-          className="border p-3 rounded-lg"
+          className="border p-2.5 rounded-lg"
         />
 
         <input
@@ -232,17 +232,17 @@ const Profile = () => {
           placeholder="password"
           onChange={handleChange}
           id="password"
-          className="border p-3 rounded-lg"
+          className="border p-2.5 rounded-lg"
         />
 
         <button
           disabled={loading}
-          className="bg-slate-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95"
+          className="bg-slate-700 text-white p-2.5 rounded-lg uppercase text-center hover:opacity-95"
         >
           {loading ? "Loading..." : "Update"}
         </button>
         <Link
-          className="bg-green-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95"
+          className="bg-green-700 text-white p-2.5 rounded-lg uppercase text-center hover:opacity-95"
           to={"/create-listing"}
         >
           Create Listing

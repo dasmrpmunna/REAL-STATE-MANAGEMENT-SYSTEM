@@ -165,7 +165,7 @@ const CreateListing = () => {
   };
 
   return (
-    <main className="p-3 max-w-4xl mx-auto">
+    <main className="bg-gray-100 p-3 max-w-4xl mx-auto min-h-screen">
       <h1 className="text-3xl font-semibold text-center my-7">
         Create Listing
       </h1>
@@ -174,7 +174,7 @@ const CreateListing = () => {
           <input
             type="text"
             placeholder="Name"
-            className="border p-3 rounded-lg"
+            className="border p-2.5 rounded-lg"
             id="name"
             maxLength="62"
             minLength="10"
@@ -194,7 +194,7 @@ const CreateListing = () => {
           <input
             type="text"
             placeholder="Address"
-            className="border p-3 rounded-lg"
+            className="border p-2.5 rounded-lg"
             id="address"
             required
             onChange={handleChange}
@@ -262,7 +262,7 @@ const CreateListing = () => {
                 min="1"
                 max="10"
                 required
-                className="p-3 border border-gray-300 rounded-lg"
+                className="p-2 border border-gray-300 rounded-lg"
                 onChange={handleChange}
                 value={formData.bedrooms}
               />
@@ -275,7 +275,7 @@ const CreateListing = () => {
                 min="1"
                 max="10"
                 required
-                className="p-3 border border-gray-300 rounded-lg"
+                className="p-2 border border-gray-300 rounded-lg"
                 onChange={handleChange}
                 value={formData.bathrooms}
               />
@@ -286,9 +286,9 @@ const CreateListing = () => {
                 type="number"
                 id="regularPrice"
                 min="50"
-                max="10000000"
+                max="1000000000"
                 required
-                className="p-3 border border-gray-300 rounded-lg"
+                className="p-2.5 border border-gray-300 rounded-lg"
                 onChange={handleChange}
                 value={formData.regularPrice}
               />
